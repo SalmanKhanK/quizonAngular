@@ -10,6 +10,7 @@ import { StarWarService } from '../star-war.service';
 })
 export class OptionTabComponent implements OnInit {
   correctOption=[]
+  a=0;
   private starwars :StarWarService;
   constructor( starwars:StarWarService) {
           this.starwars=starwars;

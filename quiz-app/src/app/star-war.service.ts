@@ -18,11 +18,13 @@ export class StarWarService{
          return (selectedLink===tru);
         
     }
-
+    a=1;
    truValue(correctOption,selectedLink){
      for(const f in correctOption){
       if (correctOption[f]===selectedLink) {
-         return console.log("Oh Yess");
+        console.log(this.a);
+         return this.a=this.a+1;
+         
       }
        }
   

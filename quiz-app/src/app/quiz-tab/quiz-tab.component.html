@@ -1,1 +1,40 @@
-<p>quiz-tab works!</p>
+<form>
+    <h1>which language used to make the static website</h1>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="optradio"
+      (click)="onValue('HTML')"
+      (click)=localClick(1)>Jquery
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="optradio"
+      value="HTML"
+      ngModel
+      (click)="onValue('SQL')"
+      (click)=localClick(1)>HTMLCSS
+    </label>
+  </div>
+  <!-- <div class="form-check">
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="optradio"
+      (click)="onValue('CSS')"
+      (click)=localClick(1) value="CSS"
+      >C language
+    </label>
+  </div> -->
+  <!-- <div *ngIf="isonValue('HTML')">
+    HTML selectted
+  </div>
+  <div *ngIf="isonValue('CSS')">
+    CSS Selected
+  </div>
+  <div *ngIf="isonValue('SQL')">
+    SQL Selected
+  </div> -->
+  <button type="button" class="btn btn-primary" 
+  [disabled]="exampleFlag"
+  (click)="truValue()"
+  >Primary</button>
+  </form>
