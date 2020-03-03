@@ -28,7 +28,7 @@ export class QuizTabComponent implements OnInit {
     //  {
     //  return this.starwars.isonValue(tru,this.selectedLink);
     // }
-
+    c=2;
    truValue(){
     this.starwars.truValue(this.correctOption,this.selectedLink);     
      }

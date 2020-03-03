@@ -32,7 +32,7 @@ export class OptionTabComponent implements OnInit {
    truValue(){
     this.starwars.truValue(this.correctOption,this.selectedLink);     
      }
-
+   c=1;
   exampleFlag=true;
   localClick(x){
    this.exampleFlag=this.starwars.localClick(x,this.exampleFlag);     

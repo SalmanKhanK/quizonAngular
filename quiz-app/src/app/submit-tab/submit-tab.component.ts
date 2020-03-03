@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-submit-tab',
@@ -11,5 +12,5 @@ export class SubmitTabComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <!-- <link rel="stylesheet" href="signup.css"> -->
+    </head>
+    <body>
+      <!-- <form  [formGroup]="postData" (ngSubmit)="onSubmit()"> -->
+  <form [formGroup]="SignupData" (ngSubmit)="onSubmit()" action="/action_page.php">
+    <div id="sform">
+      <h1>Sign Up</h1>
+      <p>First name</p>
+      <input type="text" placeholder="first name" formControlName="Fname"
+       [ngClass]="{'is-invalid':submitted && f.Fname.errors}" >
+       <div *ngIf="submitted && f.Fname.errors" class="invalid-feedback">
+        <div *ngIf="f.Fname.errors.required">First Name is required</div>
+      </div>
+      <p>Last name</p>
+      <input type="text" placeholder="last name" formControlName="Lname"
+       [ngClass]="{'is-invalid':submitted && f.Lname.errors}" >
+       <div *ngIf="submitted && f.Lname.errors" class="invalid-feedback" >
+         <div *ngIf="f.Lname.errors.required">Last name is required</div>
+       </div>
+      <p>Enter your email</p>
+      <input type="email" placeholder="Enter email" formControlName="email" 
+      [ngClass]="{'is-invalid':submitted && f.email.errors}">
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+      </div> 
+      <p>Password</p>
+      <input type="password" placeholder="Enter password" formControlName="Password"
+      [ngClass]="{'is-invalid':submitted && f.Password.errors}" >
+      <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+        <div *ngIf="f.Password.errors.required">Password is required</div>
+        <!-- <div *ngIf="f.email.errors.email">Email must be a valid email address</div> -->
+      </div> 
+      <p>Confirm password</p>
+      <input type="password" placeholder="confirm password" formControlName="Cpassword"
+      [ngClass]="{'is-invalid':submitted && f.Cpassword.errors}">
+      <div *ngIf="submitted && f.Cpassword.errors" class="invalid-feedback">
+        <div *ngIf="f.Cpassword.errors.required">Confirm Password is required</div>
+    </div><br>
+      <input type="submit" value="Submit" ><br>
+      <a style="cursor: pointer;" 
+      routerLink="">Already have an account</a>
+    </div>
+</form>
+    </body>
+</html>
+

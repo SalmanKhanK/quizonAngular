@@ -1,29 +1,32 @@
+<html>
+<body>
+<h2><span >{{c}}</span>/2</h2>
 <form id="form1">
-  <h1>Which language identifies the database?</h1>
-<div class="form-check">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio"
+  <div class="jumbotron">
+    <h4>Which language identifies the database?</h4>
+  </div>
+  <label class="container">
+    <input type="radio" checked="checked" name="radio"
     (click)="onValue('SQL')"
     (click)=localClick(1)>SQL
+    <span class="checkmark"></span>
   </label>
-</div>
-<div class="form-check">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio"
+  <label class="container">
+    <input type="radio" checked="checked" name="radio"
     value="HTML"
     ngModel
     (click)="onValue('HTML')"
     (click)=localClick(1)>HTML
+    <span class="checkmark"></span>
   </label>
-</div>
-<div class="form-check">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio"
+  <label class="container">
+    <input type="radio" checked="checked" name="radio"
     (click)="onValue('CSS')"
     (click)=localClick(1) value="CSS"
     >CSS
+    <span class="checkmark"></span>
   </label>
-</div>
+
 <!-- <div *ngIf="isonValue('HTML')">
   HTML selectted
 </div>
@@ -37,5 +40,8 @@
 [disabled]="exampleFlag"
 (click)="truValue()"
 routerLink="/agay"
+
 >Primary</button>
 </form>
+</body>
+</html>

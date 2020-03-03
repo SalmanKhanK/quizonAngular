@@ -1,22 +1,33 @@
-<form>
-    <h1>which language used to make the static website</h1>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optradio"
-      (click)="onValue('HTML')"
-      (click)=localClick(1)>Jquery
-    </label>
+
+ <h2><span >{{c}}</span>/2</h2>
+ <form>
+  <div class="jumbotron">
+    <h4>which language used to make the static website?</h4>
   </div>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optradio"
-      value="HTML"
-      ngModel
-      (click)="onValue('SQL')"
-      (click)=localClick(1)>HTMLCSS
-    </label>
-  </div>
-  <!-- <div class="form-check">
+     
+     <label class="container">
+       <input type="radio" checked="checked" name="radio"
+       (click)="onValue('HTML')"
+       (click)=localClick(1)>Jquery
+       <span class="checkmark"></span>
+     </label>
+     <label class="container">
+       <input type="radio" checked="checked" name="radio"
+       value="HTML"
+       ngModel
+       (click)="onValue('SQL')"
+       (click)=localClick(1)>HTMLCSS
+       <span class="checkmark"></span>
+     </label>
+     <label class="container">
+       <input type="radio" checked="checked" name="radio"
+       
+       ngModel
+       (click)="onValue('SQL')"
+       (click)=localClick(1)>C#
+       <span class="checkmark"></span>
+     </label>
+ <!-- <div class="form-check">
     <label class="form-check-label">
       <input type="radio" class="form-check-input" name="optradio"
       (click)="onValue('CSS')"
@@ -38,3 +49,5 @@
   (click)="truValue()"
   >Primary</button>
   </form>
+
+  

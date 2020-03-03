@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+    </head>
+    <body>
+        <div id="form">
+           <!-- <img src="login/download.png" class="logo"> -->
+           <h1>Login here</h1>
+           <form>
+           <p> Email</p>
+           <input type="email" placeholder="Enter Username"
+           [formControl]="email" >
+           <p>Password</p>
+           <input type="password" placeholder="Enter Password" 
+           [formControl]="passwor"
+           ><br>
+           <button type="button" name="" value="login"
+           (click)="login()"
+           [routerLink]="permision ? ['/start'] : []"
+            
+           >
+           Click</button>
+           <a>Recover Password</a><br>
+           <a style="cursor: pointer;"
+               routerLink="/signup">Don't have any account</a>
+           </form>
+           
+        </div>
+    </body>
+</html>
