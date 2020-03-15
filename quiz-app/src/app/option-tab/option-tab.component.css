@@ -1,3 +1,10 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+#form1{
+  height:100%;
+}
 button{
     margin-left:420px;
     margin-top: 50px;
@@ -73,9 +80,7 @@ h2{
       height: 25px;
       
   }
-  html,body{
-    height: 100%;
-  }
+  
   button{
     margin-left:420px;
     margin-top: 0px;

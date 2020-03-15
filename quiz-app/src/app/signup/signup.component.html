@@ -7,9 +7,12 @@
     </head>
     <body>
       <!-- <form  [formGroup]="postData" (ngSubmit)="onSubmit()"> -->
-  <form [formGroup]="SignupData" (ngSubmit)="onSubmit()" action="/action_page.php">
+  <form [formGroup]="SignupData" (ngSubmit)="onSubmit()" #form="ngForm">
+    
     <div id="sform">
       <h1>Sign Up</h1>
+      <p id="al">{{already}}</p>
+      <p id="al">{{successful}}</p>
       <p>First name</p>
       <input type="text" placeholder="first name" formControlName="Fname"
        [ngClass]="{'is-invalid':submitted && f.Fname.errors}" >
@@ -42,11 +45,12 @@
       <div *ngIf="submitted && f.Cpassword.errors" class="invalid-feedback">
         <div *ngIf="f.Cpassword.errors.required">Confirm Password is required</div>
     </div><br>
-      <input type="submit" value="Submit" ><br>
+      <input type="submit" value="Submit"><br>
       <a style="cursor: pointer;" 
       routerLink="">Already have an account</a>
     </div>
 </form>
+
     </body>
 </html>
 

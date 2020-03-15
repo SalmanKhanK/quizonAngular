@@ -1,0 +1,12 @@
+#result h1{
+    text-align: center;
+    color: green;
+    font-size: 50px;
+    
+}
+#result ul.list{
+    font-style: italic;
+    color: green;
+    font-size: 25px;
+
+}

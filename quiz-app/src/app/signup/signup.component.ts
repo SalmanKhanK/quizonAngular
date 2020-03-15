@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { variable } from '@angular/compiler/src/output/output_ast';
+import { CrudService } from '../crud.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -8,11 +9,18 @@ import { variable } from '@angular/compiler/src/output/output_ast';
 })
 export class SignupComponent implements OnInit {
   submitted = false;
-  constructor() { }
-
+  successful:string;
+  Reset;
+  constructor(private crudsr:CrudService ) { }
+  logins=[];
   ngOnInit(): void {
+    this.crudsr.getMethod().subscribe(
+      data=>this.logins=data
+    )
+    
   }
-  SignupData= new FormGroup({
+  already;
+  SignupData = new FormGroup({
     Fname:new FormControl('',Validators.required),
     Lname:new FormControl('',Validators.required),
     email:new FormControl('',[Validators.required, Validators.email,
@@ -24,18 +32,37 @@ export class SignupComponent implements OnInit {
     return this.SignupData.controls;
   }
   onSubmit(){
+    
     this.submitted=true;
     if(this.SignupData.controls['Password'].value===this.SignupData.controls['Cpassword'].value && 
-       this.SignupData.controls['Password'].value!==""){
-    
-          console.warn(this.SignupData.value);
-    }
-    else{
-      confirm("Password and Confirm Password are not match")
-    }
-    
-   
+       this.SignupData.controls['Password'].value!=="" && this.SignupData.controls['Fname'].value!==""
+      && this.SignupData.controls['Lname'].value!=="" && this.SignupData.controls['email'].invalid!==true){
+        for(var i=0;i<this.logins.length;i++){
+
+          if(this.SignupData.controls['email'].value===this.logins[i].email){
+             return this.already="Already Email Exist"
+               break;
+          }
+           
+        } 
+        this.crudsr.postMethod(this.SignupData.value).subscribe(user=>
+          this.successful="Your Form Submitted Successfully"
+          
+          )
+       this.already="";
+      return this.reset();
+
+     
     
   }
+    else{
+      confirm("Some fields are invalid")
+    }
+  }
+  reset(){
+    return this.SignupData.reset();
+  }
+
+  
 
 }

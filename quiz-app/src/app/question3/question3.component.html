@@ -1,31 +1,30 @@
-<body>
-
- <h2><span >{{c}}</span>/5</h2>
+<h2><span >{{c}}</span>/5</h2>
  <form>
   <div class="jumbotron">
-    <h4>What does the a stand for in RGBa?</h4>
+    <h4>	
+      If we want to show an Arrow as cursor, then which value we will use ?</h4>
   </div>
      
      <label class="container">
        <input type="radio" checked="checked" name="radio"
        (click)="onValue('HTML')"
-       (click)=localClick(1)>Apple
+       (click)=localClick(1)>pointer
        <span class="checkmark"></span>
      </label>
      <label class="container">
        <input type="radio" checked="checked" name="radio"
        value="HTML"
        ngModel
-       (click)="onValue('SQL')"
-       (click)=localClick(1)>alpha
+       (click)="onValue('CSS')"
+       (click)=localClick(1)>arrow
        <span class="checkmark"></span>
      </label>
      <label class="container">
        <input type="radio" checked="checked" name="radio"
        
        ngModel
-       (click)="onValue('CSS')"
-       (click)=localClick(1)>aqua
+       (click)="onValue('SQL')"
+       (click)=localClick(1)>default
        <span class="checkmark"></span>
      </label>
  <!-- <div class="form-check">
@@ -48,8 +47,8 @@
   <button type="button" class="btn btn-primary" 
   [disabled]="exampleFlag"
   (click)="truValue()"
-  routerLink="/question3"
+  routerLink="/question4"
   >Primary</button>
   </form>
 
-</body>
+  

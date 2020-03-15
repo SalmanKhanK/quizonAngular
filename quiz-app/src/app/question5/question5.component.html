@@ -1,0 +1,47 @@
+
+<html>
+    <body>
+    <h2><span >{{c}}</span>/5</h2>
+    <form id="form1">
+      <div class="jumbotron">
+        <h4>How can you created rounded corners using CSS3?</h4>
+      </div>
+      <label class="container">
+        <input type="radio" checked="checked" name="radio"
+        (click)="onValue('SQL')"
+        (click)=localClick(1)> border-radius: 30px;
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">
+        <input type="radio" checked="checked" name="radio"
+        value="HTML"
+        ngModel
+        (click)="onValue('HTML')"
+        (click)=localClick(1)>border[round]: 30px;
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">
+        <input type="radio" checked="checked" name="radio"
+        (click)="onValue('CSS')"
+        (click)=localClick(1) value="CSS"
+        >alpha-effect: round-corner;
+        <span class="checkmark"></span>
+      </label>
+    
+    <!-- <div *ngIf="isonValue('HTML')">
+      HTML selectted
+    </div>
+    <div *ngIf="isonValue('CSS')">
+      CSS Selected
+    </div>
+    <div *ngIf="isonValue('SQL')">
+      SQL Selected
+    </div> -->
+    <button type="button" class="btn btn-primary" 
+    [disabled]="exampleFlag"
+    (click)="truValue()"
+    routerLink="/result"
+    >Primary</button>
+    </form>
+    </body>
+    </html>

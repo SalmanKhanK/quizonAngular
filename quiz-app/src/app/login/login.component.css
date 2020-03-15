@@ -7,7 +7,7 @@ body{
 }
 #form{
   width: 320px;
-  height: 420px;
+  height: 440px;
   background: black;
   color: #fff;
   top: 50%;
@@ -77,4 +77,10 @@ h1{
 #form input[type="password"]
 {
   width: 200px;
+}
+#condition{
+  color: red;
+}
+#form #notfound{
+  color: red;
 }
