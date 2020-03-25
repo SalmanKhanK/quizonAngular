@@ -57,6 +57,15 @@
         <div class="p-2">Flex item 3</div>
       </div>
  -->
+ 
+ <div *ngFor="let link of links">
+    <div *ngIf="routerr.url === link">
+          <h1 id="timer" [ngStyle]="{'color':timeLeft >= 0 && timeLeft <=3 ? 'red' : 'black' 
+            }">{{timeLeft}}:00</h1>
+       
+   </div>
+</div>
+
  <div  class="container">
   <router-outlet></router-outlet>
 

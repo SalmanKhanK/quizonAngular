@@ -9,19 +9,19 @@
           
            <!-- <img src="login/download.png" class="logo"> -->
            <h1>Login here</h1>
-           <p id="notfound">{{notfound | lowercase}}</p>
+           <p id="notfound" *ngIf="permision==false" >Incorrect email or password</p>
+           <p id="condition">{{condition}}</p>
            <form>
            <p> Email</p>
            <input type="email" placeholder="Enter Email"
            [formControl]="email"
             >
-           <p id="condition" *ngIf="email.value==''">{{condition}}</p>
+         
            <p>Password</p>
            <input type="password" placeholder="Enter Password" 
-           [formControl]="passwor"
-           >
-           <p id="condition" *ngIf="passwor.value==''">{{condition2}}</p>
-           
+           [formControl]="passwor">
+           <!-- <p id="condition" *ngIf="passwor.value==''">{{condition2}}</p>
+            -->
            <br>
            <button type="button" name="" value="login"
            (click)="login()"
@@ -29,7 +29,9 @@
             
            >
            Click</button>
-           <a>Recover Password</a><br>
+           <a style="cursor: pointer;"
+           routerLink="/recover"
+           >Recover Password</a><br>
            <a style="cursor: pointer;"
                routerLink="/signup">Don't have any account</a>
            </form>

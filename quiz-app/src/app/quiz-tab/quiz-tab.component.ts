@@ -15,9 +15,19 @@ export class QuizTabComponent implements OnInit {
   constructor( starwars:StarWarService) {
           this.starwars=starwars;
    }
-  
+  timer;
+  count;
   ngOnInit() {
     this.correctOption=this.starwars.get();
+    // this.timer = this.starwars.subscribe(x => {
+    //   console.log(x);
+    //   this.count = x;
+    //   if (x === 10) {
+    //     this.starwars.unsubscribe();
+    //     console.log('stopped');
+    //   }
+    // });
+     
   }
     private selectedLink : string="";
     onValue(el:string){

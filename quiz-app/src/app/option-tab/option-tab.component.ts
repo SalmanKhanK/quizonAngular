@@ -18,6 +18,8 @@ export class OptionTabComponent implements OnInit {
   
   ngOnInit() {
     this.correctOption=this.starwars.get();
+   
+     
   }
     private selectedLink : string="";
     onValue(el:string){

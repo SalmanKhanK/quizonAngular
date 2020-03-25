@@ -1,7 +1,11 @@
 import{Injectable} from '@angular/core';
+
+import { Observable, Subscriber, Subscription, timer } from 'rxjs';
 @Injectable()
 export class StarWarService{
  
+  
+
     correctOption=["SQL"]
   get(){
     return this.correctOption;
@@ -30,7 +34,30 @@ export class StarWarService{
   
        
      }
-
+     
+    
+  
+    Name;
+    email1;
+  login(email,passwor,permision,logins){
+   
+  
+    for(var i=0;i<logins.length;i++){
+     // console.log(this.logins[i].Password)
+     if(email.value===logins[i].email && passwor.value===logins[i].Password){
+       this.Name=logins[i].Fname
+       console.log(this.Name)
+      this.email1=logins[i].email
+     return permision=true
+      // this.itemAdded.emit(this.email.value);
+      
+     }
+    
+    
+    }   
+    return permision=false
+  }
+  
   localClick(x,exampleFlag) {
   if(x==1){
     return exampleFlag=false; 
@@ -38,8 +65,11 @@ export class StarWarService{
  
   
   }
+ 
+}
+    
+ 
   // emailMessage(emails){
   //      return emails
   // }
   
-}

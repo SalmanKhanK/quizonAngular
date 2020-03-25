@@ -1,0 +1,19 @@
+#email{
+    margin-left: 45px;
+}
+#password{
+    margin-left: 17px;
+} 
+#button{
+  border: none;
+  outline: none;
+  height: 40px;
+  background:green;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 25px;
+}
+#login{
+  border: none;
+  color: blue;
+}

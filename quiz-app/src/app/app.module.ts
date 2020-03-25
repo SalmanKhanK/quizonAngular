@@ -18,6 +18,8 @@ import { Question3Component } from './question3/question3.component';
 import { Question4Component } from './question4/question4.component';
 import { Question5Component } from './question5/question5.component';
 import { ResultComponent } from './result/result.component';
+import { TimerComponent } from './timer/timer.component';
+import { RecoverPassComponent } from './recover-pass/recover-pass.component';
 const routes=[
   {path:"",component:LoginComponent},
   {path:"signup",component:SignupComponent},
@@ -28,6 +30,7 @@ const routes=[
   {path:"question4",component:Question4Component},
   {path:"question5",component:Question5Component},
   {path:"result",component:ResultComponent},
+  {path:"recover",component:RecoverPassComponent},
   {path:"**",redirectTo:'/'},
   
   
@@ -44,7 +47,9 @@ const routes=[
     Question3Component,
     Question4Component,
     Question5Component,
-    ResultComponent
+    ResultComponent,
+    TimerComponent,
+    RecoverPassComponent
   ],
   imports: [
     BrowserModule,

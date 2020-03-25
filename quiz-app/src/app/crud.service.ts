@@ -30,6 +30,28 @@ export class CrudService {
         catchError(this.errorHandl)
       )
     }
+  putMethod(id, data): Observable<Employe[]> {
+      return this.http.put<Employe[]>(this.baseurl + '/client/' + id, data,{
+        headers : new HttpHeaders({
+          'Content-Type':'application/json'
+       })
+      }) .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+     
+    }
+    postMethodId(id,User):Observable<Employe[]>{
+      return this.http.post<Employe[]>(this.baseurl+'/client/'+id,JSON.stringify(User),{
+        headers : new HttpHeaders({
+          'Content-Type':'application/json'
+       })
+      }).pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+     
+    }
     errorHandl(error) {
       let errorMessage = '';
       if(error.error instanceof ErrorEvent) {

@@ -1,19 +1,13 @@
 {
   "client": [
     {
-      "Fname": "salman",
-      "Lname": "khan",
-      "email": "jjj@gmail.com",
-      "Password": "pass",
-      "Cpassword": "pass",
+      "Password": "23456789",
+      "Cpassword": "23456789",
       "id": 23
     },
     {
-      "Fname": "salman",
-      "Lname": "khan",
-      "email": "jh@gmail.com",
-      "Password": "pass",
-      "Cpassword": "pass",
+      "Password": "23456789",
+      "Cpassword": "23456789",
       "id": 24
     },
     {
@@ -25,27 +19,22 @@
       "id": 25
     },
     {
+      "Password": "1234",
+      "Cpassword": "1234",
       "Fname": "Zubair",
       "Lname": "khan",
       "email": "zubair@gmail.com",
-      "Password": "pass",
-      "Cpassword": "pass",
       "id": 26
     },
     {
-      "Fname": "Zubair",
-      "Lname": "khan",
-      "email": "zubair@gmail.com",
-      "Password": "pass",
-      "Cpassword": "pass",
       "id": 27
     },
     {
+      "Password": "123",
+      "Cpassword": "123",
       "Fname": "first",
       "Lname": "last",
       "email": "d@gmail.com",
-      "Password": "pass",
-      "Cpassword": "pass",
       "id": 28
     },
     {
@@ -135,6 +124,30 @@
       "Password": "sam",
       "Cpassword": "sam",
       "id": 39
+    },
+    {
+      "Fname": "Fakhar",
+      "Lname": "Alam",
+      "email": "fakhar234@gmail.com",
+      "Password": "fakhar123",
+      "Cpassword": "fakhar123",
+      "id": 40
+    },
+    {
+      "Password": "rafay321",
+      "Cpassword": "rafay321",
+      "Fname": "Rafay",
+      "Lname": "hashim",
+      "email": "rafay123@gmail.com",
+      "id": 41
+    },
+    {
+      "Fname": "Sameer",
+      "Lname": "khan",
+      "email": "sameer123@gmail.com",
+      "Password": "pakistan",
+      "Cpassword": "pakistan",
+      "id": 42
     }
   ]
 }

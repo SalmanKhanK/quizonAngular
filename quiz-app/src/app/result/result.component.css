@@ -1,12 +1,14 @@
-#result h1{
-    text-align: center;
-    color: green;
-    font-size: 50px;
-    
-}
-#result ul.list{
-    font-style: italic;
-    color: green;
-    font-size: 25px;
 
+th,td{
+    border: 1px solid black;
+    padding: 8px;
+    text-indent: 40px;
+    letter-spacing: 2px;
+   
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: arial, sans-serif;
+    text-align: center;
 }
